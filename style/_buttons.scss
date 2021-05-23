@@ -1,0 +1,24 @@
+#buttons{
+    display:flex;
+    #left{
+        height: 7vh;
+        width:9vh;
+        border-radius: 4vh 0 0 4vh;
+        border:none;
+    }
+    #right{
+        height: 7vh;
+        width:9vh;
+        border-radius: 0 4vh 4vh 0;
+        border:none;
+    }
+}
+
+
+#left:active{
+    transform: translateX(-1vh);
+}
+
+#right:active{
+    transform: translateX(1vh);
+}
