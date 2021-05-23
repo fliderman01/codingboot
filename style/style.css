@@ -9,6 +9,9 @@
 body {
   font-family: 'Inter', sans-serif;
   font-size: 32px;
+  background-image: url(/images/pattern-curve.svg);
+  background-repeat: no-repeat;
+  background-position: bottom left;
 }
 
 #flex {
@@ -23,7 +26,7 @@ body {
   display: flex;
   background-image: url(/images/pattern-quotes.svg);
   background-repeat: no-repeat;
-  background-position: 12% 0%;
+  background-position: 18% 17%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -32,10 +35,6 @@ body {
 
 #texts #john {
   display: none;
-}
-
-#texts #tanya {
-  /*display:none;*/
 }
 
 #texts .comment {
@@ -69,7 +68,7 @@ body {
           box-shadow: 0vh 2vh 39px black;
 }
 
-#photos #engineer {
+#photos #developer {
   display: none;
 }
 
