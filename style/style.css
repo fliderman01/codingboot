@@ -9,15 +9,33 @@
 body {
   font-family: 'Inter', sans-serif;
   font-size: 32px;
-  background-image: url(/images/pattern-curve.svg);
+  background-image: url(/images/pattern-curve.svg), url(/images/pattern-bg.svg);
   background-repeat: no-repeat;
-  background-position: bottom left;
+  background-position: bottom left, right top;
+  background-size: initial, contain;
 }
 
-#flex {
+main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  /*grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "texts, photos" ;*/
+}
+
+main img {
+  -webkit-box-shadow: 0vh 2vh 39px black;
+          box-shadow: 0vh 2vh 39px black;
+  width: auto;
+  height: 90%;
+  border-radius: 1vh;
+  margin: 9vh 14vh 0 0;
+}
+
+main #developer {
+  display: none;
 }
 
 #texts {
@@ -30,7 +48,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 25vh;
+  margin-left: 18vh;
+  grid-area: texts;
 }
 
 #texts #john {
@@ -54,24 +73,14 @@ body {
   font-size: 60%;
 }
 
-#photos {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border: 2px solid red;
-  height: 100%;
-  width: 100%;
-}
-
-#photos img {
-  -webkit-box-shadow: 0vh 2vh 39px black;
-          box-shadow: 0vh 2vh 39px black;
-}
-
-#photos #developer {
-  display: none;
-}
-
+/*#photos{
+    border:2px solid red;
+    display: flex;
+    height:100%;
+    width:100%;
+    margin:1% 7% 0 0;
+    grid-area:photos;
+}*/
 #buttons {
   display: -webkit-box;
   display: -ms-flexbox;
