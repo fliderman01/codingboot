@@ -9,6 +9,10 @@
 body {
   font-family: 'Inter', sans-serif;
   font-size: 32px;
+  background-image: url(/images/pattern-curve.svg), url(/images/pattern-bg.svg);
+  background-repeat: no-repeat;
+  background-position: bottom left, right top;
+  background-size: initial, contain;
 }
 
 main {
@@ -22,54 +26,102 @@ main {
   margin: 8vh 20vh;
 }
 
-main #engineer {
-  z-index: -1;
-}
-
 #texts {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: texts;
+  background-image: url(/images/pattern-quotes.svg);
+  background-repeat: no-repeat;
+  background-position: 15vh 16.5vh;
 }
 
-#photos {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: photos;
-}
-
-#tanya {
+#texts #tanya {
   position: absolute;
   padding-right: 89vh;
   margin-top: 27vh;
 }
 
-#developer {
-  display: none;
-}
-
-#john {
+#texts #john {
   position: absolute;
   padding-right: 80vh;
   margin-top: 27vh;
   display: none;
 }
 
-.comment {
+#texts .comment {
   font-weight: 300;
   font-size: 100%;
   color: black;
 }
 
-span {
+#texts span {
   font-weight: 700;
   color: black;
 }
 
-p {
+#texts p {
   font-weight: 300;
   color: #babacf;
   font-size: 60%;
+}
+
+#photos {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: photos;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#photos #engineer {
+  z-index: -1;
+}
+
+#photos #developer {
+  display: none;
+}
+
+@media screen and (max-width: 375px) {
+  main {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "photos" "texts";
+    margin: 0vh 0vh;
+  }
+  #texts {
+    background-position: center 0vh;
+    text-align: center;
+  }
+  #texts #tanya {
+    position: initial;
+    padding-right: 0vh;
+    margin-top: 0vh;
+  }
+  #texts #john {
+    position: initial;
+    padding-right: 0vh;
+    margin-top: 0vh;
+  }
+  #photos #engineer {
+    width: 100%;
+  }
+  #photos #developer {
+    width: 100%;
+  }
+  #buttons {
+    margin: 0 0 0vh 15vh;
+    position: initial;
+    bottom: 0vh;
+    left: 0vh;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -88,6 +140,9 @@ p {
     padding-right: 71vh;
     margin-top: 22vh;
   }
+  #texts {
+    background-position: 13vh 16.5vh;
+  }
 }
 
 @media screen and (min-width: 2560px) {
@@ -95,36 +150,46 @@ p {
     padding-right: 45vh;
     margin-top: 14vh;
   }
+  #texts {
+    background-position: 07vh 22vh;
+  }
 }
 
 #buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  margin: 0 0 0vh 0vh;
+  position: relative;
+  bottom: 4vh;
+  left: 8.5vh;
+  -webkit-box-shadow: 20px 20px 50px grey;
+          box-shadow: 20px 20px 50px grey;
+  height: 59px;
+  width: 118px;
+  border-radius: 26px 26px 26px 26px;
 }
 
 #buttons #left {
-  height: 7vh;
-  width: 9vh;
-  border-radius: 4vh 0 0 4vh;
+  height: 59px;
+  width: 59px;
+  border-radius: 80px 0 0 80px;
   border: none;
 }
 
 #buttons #right {
-  height: 7vh;
-  width: 9vh;
-  border-radius: 0 4vh 4vh 0;
+  height: 59px;
+  width: 59px;
+  border-radius: 0 80px 80px 0;
   border: none;
 }
 
-#left:active {
+#buttons #left:active {
   -webkit-transform: translateX(-1vh);
           transform: translateX(-1vh);
 }
 
-#right:active {
+#buttons #right:active {
   -webkit-transform: translateX(1vh);
           transform: translateX(1vh);
 }

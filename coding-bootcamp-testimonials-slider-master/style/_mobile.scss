@@ -1,3 +1,49 @@
+// მობილური
+
+@media screen and (max-width:375px){
+
+    main{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "photos"
+        "texts";
+        margin: 0vh 0vh;
+    }
+    #texts{    
+        background-position:center 0vh;
+        text-align: center;
+        #tanya{
+            position:initial;
+            padding-right:0vh;
+            margin-top:0vh;
+        }
+        #john{
+            position:initial;
+            padding-right:0vh;
+            margin-top:0vh;
+        }
+    }
+    
+    #photos{        
+        #engineer{
+            width:100%;
+        }
+        #developer{
+            width:100%;
+        }
+    }
+
+    #buttons{
+        //align-content: center;
+        margin:0 0 0vh 15vh;
+        position:initial;
+        bottom:0vh;
+        left:0vh;
+    }
+
+}
+
 // პლანშეტი
 
 @media screen and (max-width:768px){
@@ -19,6 +65,9 @@
         padding-right:71vh;
         margin-top:22vh;
     }
+    #texts{    
+        background-position:13vh 16.5vh;
+    }
 
 }
 
@@ -28,5 +77,7 @@
         padding-right:45vh;
         margin-top:14vh;
     }
-
+    #texts{    
+        background-position:07vh 22vh;
+    }
 }

@@ -7,6 +7,10 @@
 body{
     font-family: 'Inter', sans-serif;
     font-size:32px;
+    background-image: url(/images/pattern-curve.svg), url(/images/pattern-bg.svg);
+    background-repeat: no-repeat;
+    background-position:bottom left, right top;
+    background-size:initial, contain;
 }
 
 main{
@@ -16,45 +20,51 @@ main{
     grid-template-areas: 
     "texts photos";
     margin: 8vh 20vh;
-    #engineer{
-        z-index: -1;
-    }
 }
 
 #texts{    
     grid-area:texts;
+    background-image: url(/images/pattern-quotes.svg);
+    background-repeat: no-repeat;
+    background-position:15vh 16.5vh;
+    #tanya{
+        position:absolute;
+        padding-right:89vh;
+        margin-top:27vh;
+    }
+    #john{
+        position:absolute;
+        padding-right:80vh;
+        margin-top:27vh;
+        display:none;
+    }
+    .comment{
+        font-weight:300;
+        font-size: 100%;
+        color:black;
+    }
+    span{
+        font-weight:700;
+        color:black;
+    }
+    p{
+        font-weight:300;
+        color:hsl(240, 18%, 77%);
+        font-size: 60%;
+    }
 }
 
 #photos{
     grid-area:photos;
-}
-#tanya{
-    position:absolute;
-    padding-right:89vh;
-    margin-top:27vh;
-}
-#developer{
-    display:none;
-}
-#john{
-    position:absolute;
-    padding-right:80vh;
-    margin-top:27vh;
-    display:none;
+    display: flex;
+    justify-self: flex-end;
+    flex-direction: column;
+    #engineer{
+        z-index: -1;
+    }
+    #developer{
+        display:none;
+    }
 }
 
-.comment{
-    font-weight:300;
-    font-size: 100%;
-    color:black;
-}
 
-span{
-    font-weight:700;
-    color:black;
-}
-p{
-    font-weight:300;
-    color:hsl(240, 18%, 77%);
-    font-size: 60%;
-}

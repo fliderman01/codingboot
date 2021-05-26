@@ -1,26 +1,33 @@
 #buttons{
     display:flex;
-    align-self: flex-end;
-    // margin:0 0 0 120vh;
+    //align-content: center;
+    margin:0 0 0vh 0vh;
+    position:relative;
+    bottom:4vh;
+    left:8.5vh;
+    box-shadow:20px 20px 50px grey;
+    height:59px;
+    width:118px;
+    border-radius: 26px 26px 26px 26px;
     #left{
-        height: 7vh;
-        width:9vh;
-        border-radius: 4vh 0 0 4vh;
+        height: 59px;
+        width:59px;
+        border-radius: 80px 0 0 80px;
         border:none;
     }
     #right{
-        height: 7vh;
-        width:9vh;
-        border-radius: 0 4vh 4vh 0;
+        height: 59px;
+        width:59px;
+        border-radius: 0 80px 80px 0;
         border:none;
+    }
+    #left:active{
+        transform: translateX(-1vh);
+    }
+    #right:active{
+        transform: translateX(1vh);
     }
 }
 
 
-#left:active{
-    transform: translateX(-1vh);
-}
 
-#right:active{
-    transform: translateX(1vh);
-}
