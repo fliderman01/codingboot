@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "texts photos";
+  margin: 8vh 20vh;
+}
+
+main #engineer {
+  z-index: -1;
+}
+
+#texts {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: texts;
+}
+
+#photos {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: photos;
+}
+
+#tanya {
+  position: absolute;
+  padding-right: 89vh;
+  margin-top: 27vh;
+}
+
+#developer {
+  display: none;
+}
+
+#john {
+  position: absolute;
+  padding-right: 80vh;
+  margin-top: 27vh;
+  display: none;
+}
+
+.comment {
+  font-weight: 300;
+  font-size: 100%;
+  color: black;
+}
+
+span {
+  font-weight: 700;
+  color: black;
+}
+
+p {
+  font-weight: 300;
+  color: #babacf;
+  font-size: 60%;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    margin: 2vh 2vh;
+  }
+  #tanya {
+    padding-right: 75vh;
+    margin-top: 5vh;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  #tanya {
+    padding-right: 71vh;
+    margin-top: 22vh;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  #tanya {
+    padding-right: 45vh;
+    margin-top: 14vh;
+  }
+}
+
+#buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+#buttons #left {
+  height: 7vh;
+  width: 9vh;
+  border-radius: 4vh 0 0 4vh;
+  border: none;
+}
+
+#buttons #right {
+  height: 7vh;
+  width: 9vh;
+  border-radius: 0 4vh 4vh 0;
+  border: none;
+}
+
+#left:active {
+  -webkit-transform: translateX(-1vh);
+          transform: translateX(-1vh);
+}
+
+#right:active {
+  -webkit-transform: translateX(1vh);
+          transform: translateX(1vh);
+}
+/*# sourceMappingURL=style.css.map */
